@@ -15,6 +15,7 @@ namespace Commander
 {
     public class Startup
     {
+        // Getting access to config file.
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;

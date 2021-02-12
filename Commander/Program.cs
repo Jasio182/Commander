@@ -13,9 +13,11 @@ namespace Commander
     {
         public static void Main(string[] args)
         {
+            // Creating host
             CreateHostBuilder(args).Build().Run();
         }
 
+        // Creating host with default builder and calls startup class
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
