@@ -10,6 +10,7 @@ namespace Commander.Migrations
                 name: "Commands",
                 columns: table => new
                 {
+                    // Creating ID column with autoincrement
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     HowTo = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
