@@ -18,3 +18,17 @@ D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcorea
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.dll
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.pdb
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.genruntimeconfig.cache
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.csproj.CopyComplete
