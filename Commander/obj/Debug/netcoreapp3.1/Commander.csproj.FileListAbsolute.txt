@@ -1,4 +1,3 @@
-D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.csprojAssemblyReference.cache
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.AssemblyInfoInputs.cache
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.AssemblyInfo.cs
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.csproj.CoreCompileInputs.cache
@@ -61,3 +60,5 @@ D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcorea
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
