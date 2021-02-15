@@ -1,4 +1,5 @@
 ﻿using Commander.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,6 +13,15 @@ namespace Commander.Data
         {
             _context = context;
         }
+
+        public void CreateCommand(Command cmd)
+        {
+            if (cmd == null)
+                throw new ArgumentNullException(nameof(cmd));
+            // Adding command is not enough to add data to database.
+            _context.Commands.Add(cmd);
+        }
+
         public IEnumerable<Command> GetAppComands()
         {
             return _context.Commands.ToList();
@@ -21,6 +31,12 @@ namespace Commander.Data
         {
             // Gets an object named command, where Id of command equals id from parameter. Lambda expression.
             return _context.Commands.FirstOrDefault(command => command.Id == id);
+        }
+
+        public bool SaveChanges()
+        {
+            // Data in database won't be changed, without calling this method.
+            return (_context.SaveChanges() >= 0);
         }
     }
 }

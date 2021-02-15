@@ -9,5 +9,8 @@ namespace Commander.Data
         IEnumerable<Command> GetAppComands();
         // Returnes single command based on ID.
         Command GetCommandById(int id);
+        // Contract to create something in database.
+        void CreateCommand(Command cmd);
+        bool SaveChanges();
     }
 }

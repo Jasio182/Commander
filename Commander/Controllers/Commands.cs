@@ -25,22 +25,40 @@ namespace Commander.Controllers
         // private readonly MockCommanderRepo _repository = new MockCommanderRepo();
         // GET api/commands
         [HttpGet]
-        public ActionResult<IEnumerable<CommandReadDto>> GetAllCommands()
+        public ActionResult<IEnumerable<Command>> GetAllCommands()
         {
+            // Using data in internal format.
             var commandItems = _repository.GetAppComands();
             return Ok(commandItems);
         }
 
         // GET api/commands/{id}
-        [HttpGet("{id}")]
+        // Created name to use it in CreateCommand method.
+        [HttpGet("{id}", Name = "GetCommandById")]
         public ActionResult<CommandReadDto> GetCommandById(int id)
         {
             var commandItem = _repository.GetCommandById(id);
             if (commandItem != null)
+                // Using mapper, to return data in DTO format.
                 return Ok(_mapper.Map<CommandReadDto>(commandItem));
             else
-                // Instead of 204 No Content, returns 404 Not Found
+                // Instead of 204 No Content, returns 404 Not Found.
                 return NotFound();
+        }
+
+        // It should show the created object, so <CommandReadDto> 
+        // POST api/commands
+        [HttpPost]
+        public ActionResult<CommandReadDto> CreateCommand(CommandCreateDto commandCreateDto)
+        {
+            var commandModel = _mapper.Map<Command>(commandCreateDto);
+            _repository.CreateCommand(commandModel);
+            _repository.SaveChanges();
+            // Placeholder to save file that has been created
+            var commandReadDto = _mapper.Map<CommandReadDto>(commandModel);
+            // Needs name of method that returns single object, argument of that method, and what has been created.
+            // Part of REST architecture - location of created object has to be returned.
+            return CreatedAtRoute(nameof(GetCommandById), new { Id = commandReadDto.Id }, commandReadDto);
         }
     }
 }

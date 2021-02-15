@@ -10,7 +10,10 @@ namespace Commander.Profiles
         public CommandsProfile()
         {
             // It maps between source and destination object
+            // From Command, creates CommandReadDto
             CreateMap<Command, CommandReadDto>();
+            // From CommandCreateDto, creates Command
+            CreateMap<CommandCreateDto, Command>();
         }
     }
 }
