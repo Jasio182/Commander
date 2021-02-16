@@ -38,5 +38,10 @@ namespace Commander.Data
             // Data in database won't be changed, without calling this method.
             return (_context.SaveChanges() >= 0);
         }
+
+        public void UpdateCommand(Command cmd)
+        {
+            //nothing
+        }
     }
 }

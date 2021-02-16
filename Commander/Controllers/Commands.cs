@@ -55,10 +55,26 @@ namespace Commander.Controllers
             _repository.CreateCommand(commandModel);
             _repository.SaveChanges();
             // Placeholder to save file that has been created
+            // Creates CommandReadDto object with data from commandModel using mapper.
             var commandReadDto = _mapper.Map<CommandReadDto>(commandModel);
             // Needs name of method that returns single object, argument of that method, and what has been created.
             // Part of REST architecture - location of created object has to be returned.
             return CreatedAtRoute(nameof(GetCommandById), new { Id = commandReadDto.Id }, commandReadDto);
+        }
+
+        // PUT api/commands/{id}
+        [HttpPut("{id}")]
+        public ActionResult UpdateCommand(int id, CommandUpdateDto commandUpdateDto)
+        {
+            var commandModelFromRepo = _repository.GetCommandById(id);
+            if (commandModelFromRepo == null)
+                return NotFound();
+            // Both commandUpdateDto and commandModelFromRepo already have data.
+            // Mapper inserts data from commandUpdateDto to commandModelFromRepo
+            _mapper.Map(commandUpdateDto, commandModelFromRepo);
+            _repository.UpdateCommand(commandModelFromRepo);
+            _repository.SaveChanges();
+            return NoContent();
         }
     }
 }

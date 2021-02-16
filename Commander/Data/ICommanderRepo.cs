@@ -12,5 +12,6 @@ namespace Commander.Data
         // Contract to create something in database.
         void CreateCommand(Command cmd);
         bool SaveChanges();
+        void UpdateCommand(Command cmd);
     }
 }
