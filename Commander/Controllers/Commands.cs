@@ -2,6 +2,7 @@
 using Commander.Data;
 using Commander.Dtos;
 using Commander.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -72,6 +73,27 @@ namespace Commander.Controllers
             // Both commandUpdateDto and commandModelFromRepo already have data.
             // Mapper inserts data from commandUpdateDto to commandModelFromRepo
             _mapper.Map(commandUpdateDto, commandModelFromRepo);
+            _repository.UpdateCommand(commandModelFromRepo);
+            _repository.SaveChanges();
+            return NoContent();
+        }
+
+        // PATCH api/commands/{id}
+        [HttpPatch("{id}")]
+        public ActionResult PartialCommandUpdate(int id, JsonPatchDocument<CommandUpdateDto> patchDoc)
+        {
+            // Collects data from repository of object to update
+            var commandModelFromRepo = _repository.GetCommandById(id);
+            if (commandModelFromRepo == null)
+                return NotFound();
+            // Creates new object with data collected from repository.
+            var commandToPatch = _mapper.Map<CommandUpdateDto>(commandModelFromRepo);
+            // Adds data from json to created object.
+            patchDoc.ApplyTo(commandToPatch, ModelState);
+            if (!TryValidateModel(commandToPatch))
+                return ValidationProblem(ModelState);
+            // Pushes data to repository.
+            _mapper.Map(commandToPatch, commandModelFromRepo);
             _repository.UpdateCommand(commandModelFromRepo);
             _repository.SaveChanges();
             return NoContent();

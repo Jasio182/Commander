@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json.Serialization;
 using System;
 
 namespace Commander
@@ -32,7 +33,11 @@ namespace Commander
             // Sets up DTO (Data Transfer Object) - this can be done manually, but this is easier.
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddControllers();
+            // Configuration for Newtonsoft Json
+            services.AddControllers().AddNewtonsoftJson(s=> {
+                s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
+
             // Registration of a Dependency Injection for API.
             // services.AddScoped<ICommanderRepo, MockCommanderRepo>(); not used anymore
             services.AddScoped<ICommanderRepo, SqlCommanderRepo>();

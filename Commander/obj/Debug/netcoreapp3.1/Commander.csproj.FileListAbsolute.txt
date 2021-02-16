@@ -63,3 +63,6 @@ D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcorea
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\obj\Debug\netcoreapp3.1\Commander.csprojAssemblyReference.cache
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Repositories\.NET_Core3.1_MVC_REST_API\Commander\Commander\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
